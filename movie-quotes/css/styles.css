@@ -1,0 +1,51 @@
+.peter::before {
+    content: "Dr. Peter Venkman";
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    font-size: 25px;
+    display: block;
+}
+
+.dana::before {
+    content: "Dana Barrett";
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    font-size: 25px;
+    display: block;
+}
+
+.ray::before {
+    content: "Dr. Ray Stantz";
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    font-size: 25px;
+    display: block;
+}
+
+.mayor::before {
+    content: "Mayor";
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    font-size: 25px;
+    display: block;
+}
+
+.egon::before {
+    content: "Dr. Egon Spengler";
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    font-size: 25px;
+    display: block;
+}
+
+.winston::before {
+    content: "Dr. Winston Zeddemore";
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    font-size: 25px;
+    display: block;
+}
+
+.direction {
+    font-style:italic;
+}
