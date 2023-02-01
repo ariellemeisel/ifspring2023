@@ -1,0 +1,30 @@
+
+/*.students::before {
+    content: "[STUDENTS] \A";
+    text-align: center;
+    font-size: 25px;
+    font-weight: italic;
+    margin-left: 20%;
+    font-variant-caps: all-small-caps;
+    margin-bottom: 20px;
+}
+*/
+.students {
+    text-align: right;
+    margin-right: 25%;
+}
+
+/*.all::before {
+    content: "JANIS AND STUDENTS \A";
+    font-size: 25px;
+    text-align: center;
+    font-weight: italic;
+    margin-left: 20%;
+    font-variant-caps: all-small-caps;
+    margin-bottom: 20px;
+}
+*/
+
+.all {
+    text-align: center;
+}
