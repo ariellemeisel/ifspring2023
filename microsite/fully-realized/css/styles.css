@@ -1,10 +1,33 @@
-html {
-    margin: 100px 15% 200px 15%;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ebfffb;
+}
+
+main {
+    padding: 100px 15% 25px 15%;
+    margin: 25px 0;
 }
 
 h1, h2, h3, h4, h5, p, ul, li {
     padding: 0;
     margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "pt-mono", monospace;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+main h1 {
+    margin-bottom: 50px;
+}
+h3 {
+    font-weight: 700;
+    letter-spacing: 0.05em;
 }
 
 p {
@@ -13,6 +36,11 @@ p {
     line-height: 30px;
     letter-spacing: 0.05em;
     
+}
+
+main p {
+    padding-bottom: 2em;
+    font-size: 14pt;
 }
 
 a {
@@ -29,19 +57,84 @@ li a:visited {
     text-decoration: none;
 }
 
+@media (max-width: 640px)
+{
+    h1 {font-size: 26pt;}
+    h2 {font-size: 20pt;}
+    h3 {font-size: 16pt;}
+    main p {font-size: 12pt;}
+
+}
+
+/* ----------------------------------------------- All: main nav bar ----------------------------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color:rgba(235, 255, 251, 1); 
+}
+
+#logo {
+    float: left;
+    top: 200px;
+    max-width: 200px;
+}
+
 .nav-bar {
     display: flex;
     flex-flow: row wrap;
-    column-gap: 20px;
+    column-gap: 3em;
+    row-gap: 1em;
+    padding: 50px 20px 50px 5%;
+    /* padding-inline-start: 0px; */
 }
 
 .nav-bar li {
-    font-size: 18pt;
+    font-size: 16pt;
+    font-family: "pt-mono", monospace;
+    /* cursor: url("shape 1-b.svg"); */
+    
+}
+ 
+.nav-bar li:active div {
+    color: blue;
 }
 
-main {
-    margin: 50px 0;
+.bounce {
+    position: relative;
+    display: flex;  
 }
+
+.new-word {
+    padding-left: 0.5em;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-10px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-3px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);}
+}
+
+.nav-bar li:hover .letter-1 {animation: bounce 1s ease;}
+.nav-bar li:hover .letter-2 {animation: bounce 1s ease .1s;}
+.nav-bar li:hover .letter-3 {animation: bounce 1s ease .2s;}
+.nav-bar li:hover .letter-4 {animation: bounce 1s ease .3s;}
+.nav-bar li:hover .letter-5 {animation: bounce 1s ease .4s;}
+.nav-bar li:hover .letter-6 {animation: bounce 1s ease .5s;}
+.nav-bar li:hover .letter-7 {animation: bounce 1s ease .55s;}
+.nav-bar li:hover .letter-8 {animation: bounce 1s ease .6s;}
+.nav-bar li:hover .letter-9 {animation: bounce 1s ease .65s;}
+.nav-bar li:hover .letter-10 {animation: bounce 1s ease .7s;}
+.nav-bar li:hover .letter-11 {animation: bounce 1s ease .75s;}
+.nav-bar li:hover .letter-12 {animation: bounce 1s ease .8s;}
+.nav-bar li:hover .letter-13 {animation: bounce 1s ease .85s;}
+.nav-bar li:hover .letter-14 {animation: bounce 1s ease .9s;}
+
+/* ----------------------------------------------- Home: Intro section ----------------------------------------------- */
 
 #intro {
     margin-left: 0;
@@ -70,26 +163,138 @@ main {
     margin-left: 15%;
 }
 
-#menu-1 {
+/* ----------------------------------------------- Home: Menu 1 section ----------------------------------------------- */
+#learn-more {
+    text-align: center;
+}
+
+.menu-1 {
     display: grid;
-    grid-template: 2 / 3;
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5%;
+    row-gap: 30px;
+    text-align: center;
+    margin-top: 50px;
 }
 
-#menu-1 img {
-    height: 150px;
-}
-
-/* #menu-1 a:nth-of-type(1) {
-    grid-column: 2 / 3;
-    grid-row: 1;
-}
-
-#menu-1 a:nth-of-type(2) {
-    grid-column: 3 / 4;
-    grid-row: 1;
-}
-
-#menu-1 a:nth-of-type(3) {
-    grid-column: 2 / 3;
-    grid-row: 1;
+/* .menu-1 a {
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.4));
 } */
+
+.menu-1 img {
+    height: 150px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-1 a:nth-of-type(1) {
+    background-image: url("../shapes/shape 1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-1 a:nth-of-type(2) {
+    background-image: url("../shapes/shape 2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-1 a:nth-of-type(3) {
+    background-image: url("../shapes/shape 3.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-1 a:nth-of-type(4) {
+    background-image: url("../shapes/shape 4.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-1 a:nth-of-type(5) {
+    background-image: url("../shapes/shape 5.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-1 a:nth-of-type(6) {
+    background-image: url("../shapes/shape 1-b.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-1 a:hover {
+    font-style: italic;
+    letter-spacing: 0.1em;
+    /* rotate background? */
+}
+
+.menu-1 a:hover img {
+    transform: translate(0, -15px);
+}
+
+/* .menu-1 img:hover {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+} */
+
+/* ----------------------------------------------- Footer --------------------------------------------------- */
+
+footer {
+    padding: 100px 15% 0 15%;
+    margin-top: 100px;
+    background-color: #ffd794;
+    position: relative;
+}
+
+.menu-2 {
+    margin: 40px 0;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 75%;
+    column-gap: 2em;
+    row-gap: 1em;
+}
+
+.menu-2 a {
+    border-right: 1px solid black;
+    padding-right: 2em;
+}
+
+.menu-2 p:hover {
+    /* text-decoration: line-through; */
+    /* text-shadow: 3px 2px 2px rgb(0 0 0 / 0.4); */
+    transform:rotate(2deg);
+}
+
+.menu-2 p {
+    font-size: 14pt;
+}
+
+.menu-2 a:last-of-type {
+    border: none;
+    padding: none;
+}
+
+#copyright {
+    padding-bottom: 100px;
+}
+
+#copyright p {
+    font-size: 10pt;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    width: 150px;
+
+
+}
